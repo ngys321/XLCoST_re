@@ -1,10 +1,15 @@
 # XLCoST: A Benchmark Dataset for Cross-lingual Code Intelligence
 
 ## 참고할 코드
+
 code/run.py
+
 code/modeling_t5.py
+
 code/job_test_synthesis.sh
+
 code/job_test_summarization.sh
+
 
 ## Introduction
 Recent advances in machine learning have benefited a number of code related tasks, such as code translation, code summarization, and code synthesis. Open-source code repository websites like Github provide enormous amount of source code data, which enables the training of large-scale code language models such as CodeBERT (Feng et al., 2020), PLBART (Ahmad et al., 2021a), TransCoder (Roziere et al., 2020) and CodeT5 (Wang et al., 2021). Although the open-source code data is abundant in quantity, it has several disadvantages when serving as training data for code-related models. First, most of the available code data is unlabeled. For tasks like Code Translation, Code Summarization, and Code Synthesis, high quality parallel data is critical for model training. 
