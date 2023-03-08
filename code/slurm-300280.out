@@ -1,0 +1,104 @@
+Wed Mar  8 10:35:54 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 465.19.01    Driver Version: 465.19.01    CUDA Version: 11.3     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  On   | 00000000:41:00.0 Off |                  N/A |
+| 38%   28C    P8    23W / 350W |      1MiB / 24268MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2022 NVIDIA Corporation
+Built on Wed_Jun__8_16:49:14_PDT_2022
+Cuda compilation tools, release 11.7, V11.7.99
+Build cuda_11.7.r11.7/compiler.31442593_0
+Source: python Target: desc
+Data path: /home/ysnamgoong42/ws/XLCoST/g4g/XLCoST_data/pair_data_tok_full_desc/
+Pre-trained model: Salesforce/codet5-base
+Model type: codet5
+Experiment name: codet5_pl_nl_program
+TEST_FILE_SRC: /home/ysnamgoong42/ws/XLCoST/g4g/XLCoST_data/pair_data_tok_full_desc/Python-desc/test-Python-desc-tok.py TEST_FILE_TGT: /home/ysnamgoong42/ws/XLCoST/g4g/XLCoST_data/pair_data_tok_full_desc/Python-desc/test-Python-desc-tok.txt
+03/08/2023 10:36:19 - INFO - __main__ -   Namespace(adam_epsilon=1e-08, beam_size=5, config_name='Salesforce/codet5-base', dev_filename=None, do_eval=False, do_lower_case=False, do_test=True, do_train=False, eval_batch_size=16, eval_steps=-1, gradient_accumulation_steps=1, learning_rate=5e-05, load_model_path='/home/ysnamgoong42/ws/XLCoST/code/../codet5_pl_nl_program/Python-desc/checkpoint-best-ppl/pytorch_model.bin', local_rank=-1, max_grad_norm=1.0, max_source_length=400, max_steps=-1, max_target_length=100, model_name_or_path='Salesforce/codet5-base', model_type='codet5', no_cuda=False, num_train_epochs=3.0, output_dir='/home/ysnamgoong42/ws/XLCoST/code/../codet5_pl_nl_program/Python-desc', seed=42, test_filename='/home/ysnamgoong42/ws/XLCoST/g4g/XLCoST_data/pair_data_tok_full_desc/Python-desc/test-Python-desc-tok.py,/home/ysnamgoong42/ws/XLCoST/g4g/XLCoST_data/pair_data_tok_full_desc/Python-desc/test-Python-desc-tok.txt', tokenizer_name='Salesforce/codet5-base', train_batch_size=8, train_filename=None, train_steps=-1, warmup_steps=0, weight_decay=0.0)
+03/08/2023 10:36:19 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False
+03/08/2023 10:36:32 - INFO - __main__ -   reload model from /home/ysnamgoong42/ws/XLCoST/code/../codet5_pl_nl_program/Python-desc/checkpoint-best-ppl/pytorch_model.bin
+03/08/2023 10:36:37 - INFO - __main__ -   Test file: /home/ysnamgoong42/ws/XLCoST/g4g/XLCoST_data/pair_data_tok_full_desc/Python-desc/test-Python-desc-tok.py,/home/ysnamgoong42/ws/XLCoST/g4g/XLCoST_data/pair_data_tok_full_desc/Python-desc/test-Python-desc-tok.txt
+T5ForConditionalGeneration :  /home/ysnamgoong42/miniconda3/envs/xlcost/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py
+  0%|          | 0/56 [00:00<?, ?it/s]  2%|▏         | 1/56 [00:02<02:36,  2.84s/it]  4%|▎         | 2/56 [00:04<02:00,  2.22s/it]  5%|▌         | 3/56 [00:06<01:42,  1.93s/it]  7%|▋         | 4/56 [00:08<01:39,  1.92s/it]  9%|▉         | 5/56 [00:09<01:31,  1.79s/it] 11%|█         | 6/56 [00:12<01:46,  2.13s/it] 12%|█▎        | 7/56 [00:14<01:39,  2.03s/it] 14%|█▍        | 8/56 [00:16<01:37,  2.04s/it] 16%|█▌        | 9/56 [00:18<01:36,  2.06s/it] 18%|█▊        | 10/56 [00:21<01:53,  2.46s/it] 20%|█▉        | 11/56 [00:24<01:50,  2.45s/it] 21%|██▏       | 12/56 [00:30<02:33,  3.48s/it] 23%|██▎       | 13/56 [00:32<02:19,  3.24s/it] 25%|██▌       | 14/56 [00:35<02:10,  3.11s/it] 27%|██▋       | 15/56 [00:38<02:05,  3.07s/it] 29%|██▊       | 16/56 [00:41<02:04,  3.10s/it] 30%|███       | 17/56 [00:44<02:01,  3.12s/it] 32%|███▏      | 18/56 [00:48<01:58,  3.13s/it] 34%|███▍      | 19/56 [00:51<01:57,  3.18s/it] 36%|███▌      | 20/56 [00:55<02:02,  3.39s/it] 38%|███▊      | 21/56 [00:58<02:00,  3.44s/it] 39%|███▉      | 22/56 [01:02<01:58,  3.49s/it] 41%|████      | 23/56 [01:06<01:57,  3.57s/it] 43%|████▎     | 24/56 [01:10<02:01,  3.79s/it] 45%|████▍     | 25/56 [01:14<01:59,  3.84s/it] 46%|████▋     | 26/56 [01:18<02:01,  4.04s/it] 48%|████▊     | 27/56 [01:23<02:02,  4.23s/it] 50%|█████     | 28/56 [01:28<02:05,  4.47s/it] 52%|█████▏    | 29/56 [01:34<02:15,  5.03s/it] 54%|█████▎    | 30/56 [01:39<02:08,  4.96s/it] 55%|█████▌    | 31/56 [01:44<02:04,  4.97s/it] 57%|█████▋    | 32/56 [01:50<02:05,  5.21s/it] 59%|█████▉    | 33/56 [01:56<02:02,  5.34s/it] 61%|██████    | 34/56 [02:03<02:09,  5.90s/it] 62%|██████▎   | 35/56 [02:09<02:02,  5.86s/it] 64%|██████▍   | 36/56 [02:14<01:57,  5.86s/it] 66%|██████▌   | 37/56 [02:20<01:50,  5.83s/it] 68%|██████▊   | 38/56 [02:26<01:46,  5.91s/it] 70%|██████▉   | 39/56 [02:33<01:44,  6.16s/it] 71%|███████▏  | 40/56 [02:40<01:40,  6.31s/it] 73%|███████▎  | 41/56 [02:46<01:36,  6.41s/it] 75%|███████▌  | 42/56 [02:53<01:31,  6.53s/it] 77%|███████▋  | 43/56 [03:00<01:26,  6.66s/it] 79%|███████▊  | 44/56 [03:07<01:20,  6.71s/it] 80%|████████  | 45/56 [03:14<01:15,  6.87s/it] 82%|████████▏ | 46/56 [03:22<01:12,  7.21s/it] 84%|████████▍ | 47/56 [03:30<01:06,  7.37s/it] 86%|████████▌ | 48/56 [03:37<00:58,  7.35s/it] 88%|████████▊ | 49/56 [03:45<00:52,  7.55s/it] 89%|████████▉ | 50/56 [03:53<00:45,  7.56s/it] 91%|█████████ | 51/56 [04:01<00:38,  7.78s/it] 93%|█████████▎| 52/56 [04:09<00:31,  7.85s/it] 95%|█████████▍| 53/56 [04:17<00:23,  7.94s/it] 96%|█████████▋| 54/56 [04:26<00:16,  8.07s/it] 98%|█████████▊| 55/56 [04:34<00:08,  8.09s/it]100%|██████████| 56/56 [04:42<00:00,  8.04s/it]100%|██████████| 56/56 [04:42<00:00,  5.04s/it]
+03/08/2023 10:41:21 - INFO - __main__ -     bleu-4 = 9.77 
+03/08/2023 10:41:21 - INFO - __main__ -     xMatch = 1.1274 
+03/08/2023 10:41:21 - INFO - __main__ -     ********************
+tokenizer.decode(top_preds[0]): Minimize the sum of product of all subarrays of an array
+tokenizer.decode(top_preds[0]): Find the number of K
+tokenizer.decode(top_preds[0]): Number of ways to split a number into two subarrays such that the sum of digits is equal to the sum of their digits
+tokenizer.decode(top_preds[0]): Maximum time with difference in range [ L , R ]
+tokenizer.decode(top_preds[0]): Maximum point of intersection of two points
+tokenizer.decode(top_preds[0]): Check if a number is undulating or not
+tokenizer.decode(top_preds[0]): Set the bit number in the binary representation of a number
+tokenizer.decode(top_preds[0]): Left rotation of an array by one
+tokenizer.decode(top_preds[0]): Find the smallest missing element in an array
+tokenizer.decode(top_preds[0]): Longest Common Subsequence | DP
+tokenizer.decode(top_preds[0]): Count number of ways to reach the top left corner
+tokenizer.decode(top_preds[0]): Miiller Prime Numbers
+tokenizer.decode(top_preds[0]): Count number of triplets ( a , b ) such that ( a ^ b ) = 0
+tokenizer.decode(top_preds[0]): Program to find the Area of a Sector
+tokenizer.decode(top_preds[0]): Number of ways to split N numbers into two subarrays such that their sum is equal to their index
+tokenizer.decode(top_preds[0]): Longest Increasing Subsequence | DP
+tokenizer.decode(top_preds[0]): Seires Sum
+tokenizer.decode(top_preds[0]): Partition array into two parts sorted in increasing order
+tokenizer.decode(top_preds[0]): Maximize the number of squares that can be formed from two given numbers
+tokenizer.decode(top_preds[0]): Count number of sets ( i , j ) such that a [ i ] [ j ] = a [ i ] [ j ] and a [ j ] [ i ] = a [ j ] [ i ]
+tokenizer.decode(top_preds[0]): Number of paths from top left to bottom right in a matrix
+tokenizer.decode(top_preds[0]): Add two numbers without using Bitwise AND and Bitwise XOR
+tokenizer.decode(top_preds[0]): Queries to find the Bitwise XOR of all prefixes of an array
+tokenizer.decode(top_preds[0]): Reverse an array in O ( n ) time and O ( 1 ) extra space in O ( 1 ) extra space
+tokenizer.decode(top_preds[0]): Maximize count of abca , BOOK and BAND strings from a given string
+tokenizer.decode(top_preds[0]): Longest subsequence having different elements in the given array
+tokenizer.decode(top_preds[0]): Count of subsets with sum less than K
+tokenizer.decode(top_preds[0]): Count pairs from an array whose product is greater than K * arr [ j ]
+tokenizer.decode(top_preds[0]): Check if it is possible to make two sorted arrays sorted
+tokenizer.decode(top_preds[0]): Minimize the number of subgroups required to reach the end of an array
+tokenizer.decode(top_preds[0]): Find the number of shifts required to make all array elements equal
+tokenizer.decode(top_preds[0]): Minimize the number of operations required to convert a Binary String to a Binary String
+tokenizer.decode(top_preds[0]): Check if all elements of an array have equal sum
+tokenizer.decode(top_preds[0]): Maximum Sum Contiguous Subarray | DP
+tokenizer.decode(top_preds[0]): Generate palindromic strings from given string
+tokenizer.decode(top_preds[0]): Encrypt a string using given algorithm
+tokenizer.decode(top_preds[0]): Count occurrences of a word in a string
+tokenizer.decode(top_preds[0]): Area of the circle that can be inscribed in an equilateral triangle
+tokenizer.decode(top_preds[0]): Minimize the number of subsets that can be formed from the first N natural numbers
+tokenizer.decode(top_preds[0]): Product of all pairs in an array such that their sum is divisible by their product
+tokenizer.decode(top_preds[0]): Check if a number can be reduced to a given number
+tokenizer.decode(top_preds[0]): Check if a point exists in the given triangle
+tokenizer.decode(top_preds[0]): Maximize sum of subarrays of size K
+tokenizer.decode(top_preds[0]): Check if a number can be represented as sum of k prime factors
+tokenizer.decode(top_preds[0]): Compare two numbers with their logarithmic product
+tokenizer.decode(top_preds[0]): Find the balanced array after performing given operations on given array
+tokenizer.decode(top_preds[0]): Check if two arrays have equal sum and product equal to their product
+tokenizer.decode(top_preds[0]): Average of odd numbers
+tokenizer.decode(top_preds[0]): Count pairs with maximum frequency in an array
+tokenizer.decode(top_preds[0]): Minimum number of operations required to reduce a number to 0
+tokenizer.decode(top_preds[0]): Reverse of digits of a number
+tokenizer.decode(top_preds[0]): Check if a string can be formed from a given pattern or not
+tokenizer.decode(top_preds[0]): Number of diagonals in convex polygon
+tokenizer.decode(top_preds[0]): Print k substrings of a given string
+tokenizer.decode(top_preds[0]): Lexicographically smallest element in an array such that their sum is equal to their sum
+tokenizer.decode(top_preds[0]): Minimize difference between minimum and maximum of two elements in an array
+usage: evaluator.py [-h] [--references REFERENCES] [--predictions PREDICTIONS]
+evaluator.py: error: unrecognized arguments:  
+run_NL_PL.sh: line 202: --references: command not found
+usage: calc_code_bleu.py [-h] --refs REFS [REFS ...] --hyp HYP --lang
+                         {java,javascript,c_sharp,php,go,python,cpp,c,ruby}
+                         [--params PARAMS]
+calc_code_bleu.py: error: the following arguments are required: --refs, --hyp, --lang
+run_NL_PL.sh: line 208: --ref: command not found
